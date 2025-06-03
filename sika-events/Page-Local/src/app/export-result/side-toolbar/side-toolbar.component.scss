@@ -1,0 +1,120 @@
+.root {
+  position: relative;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.root_stateActiveSizeSmall {
+  overflow: hidden;
+  width: 61px;
+}
+
+.root_sizeSmall {
+  height: 60px;
+}
+
+.root_stateActiveSizeDefault {
+  height: 120px;
+}
+
+.root_stateRestingSizeDefault {
+  height: 120px;
+}
+
+.root_stateRestingSizeSmall {
+  width: 60px;
+}
+
+.root_sizeDefault {
+  width: 112px;
+}
+.bg {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.bg_stateActiveSizeDefault {
+  display: flex;
+}
+
+.bg_stateRestingSizeDefault {
+  display: flex;
+}
+
+.ellipse {
+  display: flex;
+  box-sizing: content-box;
+}
+
+.ellipse_stateActiveSizeDefault {
+  display: flex;
+}
+
+.ellipse_stateRestingSizeDefault {
+  display: flex;
+}
+
+.textSubtext {
+  display: flex;
+  box-sizing: content-box;
+  font-weight: 400;
+  text-align: center;
+  text-wrap: nowrap;
+  height: 16px;
+}
+
+.textSubtext_stateActiveSizeDefault {
+  color: #000000;
+}
+
+.textSubtext_stateRestingSizeDefault {
+  color: #000000;
+}
+
+.borderBottom {
+  display: flex;
+  box-sizing: content-box;
+}
+
+.borderBottom_sizeSmall {
+  display: flex;
+}
+
+.borderBottom_2 {
+  display: flex;
+}
+
+.bg {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.ellipse {
+  top: 18px;
+  left: 18px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.ellipse_stateActiveSizeSmall {
+  display: flex;
+}
+
+.ellipse_stateRestingSizeSmall {
+  display: flex;
+}
+
+.bg {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
