@@ -1,0 +1,63 @@
+<div class="event-location-page page-container ">
+
+  <!-- <aside class="page-sidebar">
+    <app-side-toolbar [state]="'Active'" [size]="'Default'"></app-side-toolbar>
+  </aside> -->
+
+  <main class="page-content page-panel">
+
+    <header class="page-header">
+      <img src="assets/images/kymera-logo.png" alt="Kymera International Logo" class="logo">
+      <h1 class="company-title">KYMERA INTERNATIONAL</h1>
+    </header>
+
+    
+
+    <form class="location-form">
+      <h2 class="form-title">Local do evento</h2>
+
+      <div class="form-group">
+        <label for="department" class="form-label">Departamento</label>
+        <select id="department" name="department" class="form-select">
+          <option value="" disabled selected>Selecione o departamento</option>
+          <option value="ti">Tecnologia da Informação</option>
+          <option value="rh">Recursos Humanos</option>
+          <option value="producao">Produção</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sector" class="form-label">Setor</label>
+        <select id="sector" name="sector" class="form-select">
+          <option value="" disabled selected>Selecione o setor</option>
+          <option value="desenvolvimento">Desenvolvimento</option>
+          <option value="suporte">Suporte</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="local-manager" class="form-label">Responsável do local</label>
+        <input type="text" id="local-manager" name="local-manager" class="form-input" placeholder="Digite o nome">
+      </div>
+
+      <div class="form-group form-group--toggle">
+        <label for="workstation-toggle" class="form-label">Workstation</label>
+        <div class="toggle-switch">
+          <input type="checkbox" id="workstation-toggle" class="toggle-switch__input">
+          <label for="workstation-toggle" class="toggle-switch__slider"></label>
+        </div>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit" class="button button--primary">
+          <span>Salvar Local</span>
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M14.0098 11.5H5.99976V13.5H14.0098V16.5L17.9998 12.5L14.0098 8.5V11.5Z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+</div>

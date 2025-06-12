@@ -1,0 +1,21 @@
+// Importa variáveis globais ou mixins, se estiverem em um arquivo separado.
+// @import 'path/to/variables';
+
+.risk-classification-group {
+  
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: var(--spacing-medium);
+  margin: 0; // Remove a margem padrão do fieldset
+}
+
+.fieldset-legend {
+  // O estilo para a legenda do fieldset.
+  font-family: var(--font-family-headings);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 var(--spacing-small);
+  margin-left: var(--spacing-medium);
+  color: var(--color-text-dark);
+}
+

@@ -1,0 +1,82 @@
+<div class="risk-assessment-page page-container">
+
+  <!-- <aside class="page-sidebar">
+    <app-side-toolbar [state]="'Active'" [size]="'Default'"></app-side-toolbar>
+  </aside> -->
+
+  <main class="page-content page-panel ">
+
+    <header class="page-header">
+      <img src="assets/images/kymera-logo.png" alt="Kymera International Logo" class="logo">
+      <h1 class="company-title">KYMERA INTERNATIONAL</h1>
+    </header>
+
+    <!-- <app-a-4-tabs class="page-tabs"></app-a-4-tabs> -->
+
+    <form class="risk-form">
+      <h2 class="form-title">Avaliação de riscos</h2>
+
+      <div class="form-group">
+        <label for="risk-type" class="form-label">Tipo de risco</label>
+        <select id="risk-type" class="form-select">
+          <option value="" disabled selected>Selecione a categoria</option>
+          <option value="ambiental">Risco Ambiental</option>
+          <option value="financeiro">Risco Financeiro</option>
+          <option value="operacional">Risco Operacional</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="risk-category" class="form-label">Categoria</label>
+        <select id="risk-category" class="form-select">
+          <option value="equipamento">Equipamento</option>
+          <option value="processo">Processo</option>
+          <option value="humano">Humano</option>
+        </select>
+      </div>
+      
+      <app-radio-buttons class="form-group"></app-radio-buttons>
+
+      <div class="form-group">
+        <label for="estimated-impact" class="form-label">Impacto estimado</label>
+        <select id="estimated-impact" class="form-select">
+          <option value="" disabled selected>Selecione a categoria</option>
+          <option value="baixo">Baixo</option>
+          <option value="medio">Médio</option>
+          <option value="alto">Alto</option>
+        </select>
+      </div>
+
+      <fieldset class="form-fieldset">
+        <legend class="fieldset-legend">Gestão de risco</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="risk-classification" class="form-label">Classificação de risco</label>
+            <select id="risk-classification" class="form-select">
+              <option value="auto">Automático</option>
+              <option value="manual">Manual</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="existing-controls" class="form-label">Controles existentes</label>
+            <select id="existing-controls" class="form-select">
+              <option value="option1">Opção 1</option>
+              <option value="option2">Opção 2</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      
+      <div class="form-actions">
+        <button type="submit" class="button button--primary">
+          <span>Salvar avaliação</span>
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M14.5095 11H6.49951V13H14.5095V16L18.4995 12L14.5095 8V11Z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+</div>

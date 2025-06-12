@@ -1,0 +1,190 @@
+
+// :host {
+//   --color-primary: #262f68;
+//   --color-primary-text: #ffffff;
+//   --color-text-dark: #242731;
+//   --color-text-body: #242426;
+//   --color-text-light: #818181;
+//   --color-background: #ffffff;
+//   --color-border: #bbbfc1;
+//   --color-border-light: #e0e0e0;
+  
+//   --font-family-headings: 'Poppins', sans-serif;
+//   --font-family-body: 'Roboto', sans-serif;
+
+//   --spacing-small: 8px;
+//   --spacing-medium: 16px;
+//   --spacing-large: 24px;
+//   --spacing-xlarge: 32px;
+// }
+
+// /* =================================================================
+//    ESTRUTURA PRINCIPAL DA PÁGINA
+//    Usa CSS Grid para criar um layout de duas colunas (sidebar + conteúdo),
+//    o que é muito mais robusto que 'position: absolute'.
+// ================================================================= */
+// .risk-assessment-page {
+//   display: grid;
+//   grid-template-columns: auto 1fr; // A sidebar ocupa o espaço que precisar, o conteúdo ocupa o resto.
+//   height: 100vh;
+//   background-color: var(--color-background);
+// }
+
+// .page-sidebar {
+//   // O componente app-side-toolbar já deve ter seus próprios estilos.
+//   // Podemos adicionar um fundo ou borda aqui se necessário.
+//   border-right: 1px solid var(--color-border-light);
+// }
+
+// .page-content {
+//   padding: var(--spacing-large) var(--spacing-xlarge);
+//   overflow-y: auto; // Adiciona scroll se o conteúdo for maior que a tela.
+// }
+
+// /* =================================================================
+//    CABEÇALHO DA PÁGINA
+// ================================================================= */
+// .page-header {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: var(--spacing-medium);
+//   margin-bottom: var(--spacing-large);
+
+//   .logo {
+//     width: 80px;
+//     height: 80px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   }
+
+//   .company-title {
+//     color: var(--color-text-dark);
+//     font-family: 'Kanit', sans-serif; // Fonte específica do logo
+//     font-size: 16px;
+//     font-weight: 700;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+//     margin: 0;
+//   }
+// }
+
+// /* =================================================================
+//    FORMULÁRIO DE AVALIAÇÃO DE RISCO
+// ================================================================= */
+// .risk-form {
+//   max-width: 600px; // Limita a largura do formulário para melhor legibilidade
+//   margin: 0 auto; // Centraliza o formulário na área de conteúdo
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--spacing-large);
+// }
+
+// .form-title {
+//   color: var(--color-text-dark);
+//   font-family: var(--font-family-headings);
+//   font-size: 30px;
+//   font-weight: 700;
+//   text-align: center;
+//   margin-bottom: var(--spacing-small);
+// }
+
+// .form-group,
+// .form-fieldset {
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--spacing-small);
+// }
+
+// .form-fieldset {
+//   border: 1px solid var(--color-border-light);
+//   border-radius: 8px;
+//   padding: var(--spacing-medium);
+// }
+
+// .fieldset-legend {
+//   font-family: var(--font-family-headings);
+//   font-weight: 600;
+//   font-size: 18px;
+//   padding: 0 var(--spacing-small);
+//   margin-left: var(--spacing-medium);
+//   color: var(--color-text-dark);
+// }
+
+// .form-label {
+//   font-family: var(--font-family-headings);
+//   font-size: 18px;
+//   font-weight: 600;
+//   color: var(--color-text-dark);
+// }
+
+// // Estilização para o <select> nativo para parecer customizado
+// .form-select {
+//   padding: var(--spacing-medium);
+//   font-size: 18px;
+//   font-family: var(--font-family-body);
+//   color: var(--color-text-body);
+//   background-color: var(--color-background);
+//   border: 1px solid var(--color-border);
+//   border-radius: 4px;
+//   width: 100%;
+
+//   // Customiza a aparência do select, incluindo a seta
+//   appearance: none;
+//   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+//   background-repeat: no-repeat;
+//   background-position: right 1rem center;
+//   background-size: 16px 12px;
+// }
+
+// // Container para colocar campos lado a lado
+// .form-row {
+//   display: flex;
+//   gap: var(--spacing-large);
+  
+//   // Cada .form-group dentro da linha ocupará o espaço disponível
+//   > .form-group {
+//     flex: 1;
+//   }
+// }
+
+// /* =================================================================
+//    BOTÕES
+// ================================================================= */
+// .form-actions {
+//   display: flex;
+//   justify-content: flex-end; // Alinha o botão à direita
+//   margin-top: var(--spacing-medium);
+// }
+
+// .button {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: var(--spacing-small);
+//   font-family: var(--font-family-headings);
+//   font-size: 16px;
+//   font-weight: 500;
+//   padding: var(--spacing-medium) var(--spacing-large);
+//   border-radius: 4px;
+//   border: 1px solid transparent;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+
+//   // Modificador para o botão primário
+//   &--primary {
+//     background-color: var(--color-primary);
+//     color: var(--color-primary-text);
+//     border-color: var(--color-primary);
+
+//     &:hover {
+//       opacity: 0.9;
+//     }
+//   }
+
+//   // Estilos para o ícone dentro do botão
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//     fill: currentColor; // O ícone herda a cor do texto do botão
+//   }
+// }

@@ -1,0 +1,60 @@
+
+// A classe base para o nosso botão. Usa Flexbox para alinhar o conteúdo internamente.
+// Substitui a necessidade de position: absolute.
+.toolbar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; // Espaçamento inteligente entre ícone e texto
+  padding: 1rem;
+  border: none;
+  background-color: var(--item-bg-resting);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease-in-out;
+
+  // Uma única classe para controlar a borda inferior.
+  // Substitui .borderBottom, .borderBottom_2, etc.
+  &.has-border {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  // Uma única classe para o estado ATIVO.
+  // Substitui todas as classes que continham "stateActive".
+  &.is-active {
+    background-color: var(--item-bg-active);
+
+    // Altera a cor do ícone quando o botão está ativo.
+    .toolbar-item__icon {
+      background-color: var(--icon-bg-active);
+    }
+  }
+
+  // Uma única classe para o tamanho PEQUENO.
+  // Substitui todas as classes que continham "sizeSmall".
+  &.is-small {
+    padding: 0.75rem;
+    
+    .toolbar-item__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+// Estilo do ícone. O círculo é feito com CSS, substituindo o SVG.
+.toolbar-item__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--icon-bg-resting);
+  transition: background-color var(--transition-speed) ease-in-out, width 0.2s ease, height 0.2s ease;
+}
+
+// Estilo do texto. Substitui a classe .textSubtext.
+.toolbar-item__text {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 400;
+  text-align: center;
+}

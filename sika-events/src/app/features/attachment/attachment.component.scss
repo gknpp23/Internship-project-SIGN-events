@@ -1,0 +1,40 @@
+/* Estilos para um botão de ícone genérico.
+   Esta classe pode ser usada para qualquer botão que contenha apenas um ícone.
+*/
+.icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  // Define um tamanho e padding padrão.
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  
+  // Estilo visual.
+  border: none;
+  background-color: transparent;
+  border-radius: 50%; // Deixa o botão redondo.
+  cursor: pointer;
+  color: #262626; // Define a cor do ícone (via fill="currentColor" no SVG).
+  
+  // Efeito de transição suave.
+  transition: background-color 0.2s ease-in-out;
+
+  // Feedback visual ao passar o mouse por cima.
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  // Estilo de foco para acessibilidade (navegação via teclado).
+  &:focus-visible {
+    outline: 2px solid var(--color-primary, #262f68);
+    outline-offset: 2px;
+  }
+
+  // Define o tamanho do SVG dentro do botão.
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

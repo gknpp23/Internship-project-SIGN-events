@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'app/styles/base';
+
+// // Define variáveis para cores e outros valores, facilitando a manutenção.
+// :host {
+//   --primary-color: #0d6efd; // Azul primário (Bootstrap como exemplo)
+//   --text-color: #333;
+//   --text-color-light: #666;
+//   --border-color: #dee2e6;
+//   --background-hover: #f8f9fa;
+//   --font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+//   --transition-speed: 0.2s;
+// }
+
+// // Define variáveis para cores e outros valores, facilitando a manutenção futura.
+
+// :host {
+//   --item-bg-resting: #ffffff;
+//   --item-bg-active: #f9f9f9;
+//   --icon-bg-resting: #8f8f8f;
+//   --icon-bg-active: rgba(0, 0, 0, 0.56);
+//   --border-color: #dedede;
+//   --text-color: #333;
+//   --transition-speed: 0.2s; // Para animações suaves
+// }

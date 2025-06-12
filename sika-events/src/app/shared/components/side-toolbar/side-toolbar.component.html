@@ -1,0 +1,13 @@
+<button
+  class="toolbar-item"
+  [class.is-active]="state === 'Active'"
+  [class.is-small]="size === 'Small'"
+  [class.has-border]="base"
+  [attr.aria-pressed]="state === 'Active'"
+>
+  <div class="toolbar-item__icon"></div>
+
+  <span *ngIf="size !== 'Small'" class="toolbar-item__text">
+    Toolbar item
+  </span>
+</button>

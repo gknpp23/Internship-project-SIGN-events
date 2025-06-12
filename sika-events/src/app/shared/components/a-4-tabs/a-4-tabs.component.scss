@@ -1,0 +1,57 @@
+// Estiliza o container principal do componente de abas.
+.tabs-container {
+  font-family: var(--font-family);
+  width: 100%;
+  border-bottom: 2px solid var(--border-color);
+}
+
+// Remove estilos padrão da lista e a transforma em um container flex.
+.tabs-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Estilos para o botão que representa cada aba individual.
+.tab-button {
+  // Estilos visuais e de espaçamento
+  padding: 1rem 1.5rem;
+  color: var(--text-color-light);
+  background-color: transparent;
+  text-align: center;
+  
+  // Remove a borda padrão do botão e adiciona uma borda inferior "invisível"
+  // para que o alinhamento não mude quando a aba se tornar ativa.
+  border: none;
+  border-bottom: 3px solid transparent;
+
+  // Garante que o cursor mude para indicar que é clicável.
+  cursor: pointer;
+
+  // Adiciona uma transição suave para as mudanças de cor e fundo.
+  transition:
+    color var(--transition-speed) ease-in-out,
+    border-color var(--transition-speed) ease-in-out;
+  
+  // Estilos de interação para uma melhor experiência do usuário.
+  &:hover {
+    color: var(--text-color);
+  }
+
+  // Estilos de acessibilidade para navegação via teclado.
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+    border-radius: 4px;
+  }
+}
+
+// Classe modificadora para a aba que está atualmente ativa.
+
+.tab-button.is-active {
+  font-weight: 600;
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
