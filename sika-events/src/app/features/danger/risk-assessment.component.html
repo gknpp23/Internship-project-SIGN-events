@@ -1,82 +1,82 @@
 <div class="risk-assessment-page page-container">
-
-  <!-- <aside class="page-sidebar">
-    <app-side-toolbar [state]="'Active'" [size]="'Default'"></app-side-toolbar>
-  </aside> -->
-
-  <main class="page-content page-panel ">
-
+  <main class="page-content page-panel">
+    <!-- 
     <header class="page-header">
-      <img src="assets/images/kymera-logo.png" alt="Kymera International Logo" class="logo">
-      <h1 class="company-title">KYMERA INTERNATIONAL</h1>
+      <img
+        src="assets/images/your-logo.png"
+        alt="CompanyLogo"
+        class="logo"
+      />
+      <h1 class="company-title">ACME CORP</h1>
     </header>
-
-    <!-- <app-a-4-tabs class="page-tabs"></app-a-4-tabs> -->
+    -->
 
     <form class="risk-form">
       <h2 class="form-title">Avaliação de riscos</h2>
 
-      <div class="form-group">
-        <label for="risk-type" class="form-label">Tipo de risco</label>
-        <select id="risk-type" class="form-select">
-          <option value="" disabled selected>Selecione a categoria</option>
-          <option value="ambiental">Risco Ambiental</option>
-          <option value="financeiro">Risco Financeiro</option>
-          <option value="operacional">Risco Operacional</option>
-        </select>
-      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Tipo de risco</mat-label>
+        <mat-select name="riskType">
+          <mat-option value="ambiental">Risco Ambiental</mat-option>
+          <mat-option value="financeiro">Risco Financeiro</mat-option>
+          <mat-option value="operacional">Risco Operacional</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-      <div class="form-group">
-        <label for="risk-category" class="form-label">Categoria</label>
-        <select id="risk-category" class="form-select">
-          <option value="equipamento">Equipamento</option>
-          <option value="processo">Processo</option>
-          <option value="humano">Humano</option>
-        </select>
-      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select name="riskCategory">
+          <mat-option value="equipamento">Equipamento</mat-option>
+          <mat-option value="processo">Processo</mat-option>
+          <mat-option value="humano">Humano</mat-option>
+        </mat-select>
+      </mat-form-field>
       
-      <app-radio-buttons class="form-group"></app-radio-buttons>
-
       <div class="form-group">
-        <label for="estimated-impact" class="form-label">Impacto estimado</label>
-        <select id="estimated-impact" class="form-select">
-          <option value="" disabled selected>Selecione a categoria</option>
-          <option value="baixo">Baixo</option>
-          <option value="medio">Médio</option>
-          <option value="alto">Alto</option>
-        </select>
+        <label id="risk-classification-group-label" class="form-label">Classificação de risco</label>
+        <mat-radio-group class="radio-group" aria-labelledby="risk-classification-group-label">
+          <mat-radio-button value="alta">Alta</mat-radio-button>
+          <mat-radio-button value="media">Média</mat-radio-button>
+          <mat-radio-button value="baixa">Baixa</mat-radio-button>
+        </mat-radio-group>
       </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Impacto estimado</mat-label>
+        <mat-select name="estimatedImpact">
+          <mat-option value="baixo">Baixo</mat-option>
+          <mat-option value="medio">Médio</mat-option>
+          <mat-option value="alto">Alto</mat-option>
+        </mat-select>
+      </mat-form-field>
 
       <fieldset class="form-fieldset">
         <legend class="fieldset-legend">Gestão de risco</legend>
         <div class="form-row">
-          <div class="form-group">
-            <label for="risk-classification" class="form-label">Classificação de risco</label>
-            <select id="risk-classification" class="form-select">
-              <option value="auto">Automático</option>
-              <option value="manual">Manual</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="existing-controls" class="form-label">Controles existentes</label>
-            <select id="existing-controls" class="form-select">
-              <option value="option1">Opção 1</option>
-              <option value="option2">Opção 2</option>
-            </select>
-          </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Classificação de risco</mat-label>
+              <mat-select name="riskClassification">
+                <mat-option value="auto">Automático</mat-option>
+                <mat-option value="manual">Manual</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Controles existentes</mat-label>
+              <mat-select name="existingControls">
+                <mat-option value="option1">Opção 1</mat-option>
+                <mat-option value="option2">Opção 2</mat-option>
+              </mat-select>
+            </mat-form-field>
         </div>
       </fieldset>
       
       <div class="form-actions">
-        <button type="submit" class="button button--primary">
+        <button mat-raised-button color="primary" type="submit">
           <span>Salvar avaliação</span>
-          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M14.5095 11H6.49951V13H14.5095V16L18.4995 12L14.5095 8V11Z" fill="white"/>
-          </svg>
+          <mat-icon>arrow_forward</mat-icon>
         </button>
       </div>
-
     </form>
   </main>
-
 </div>

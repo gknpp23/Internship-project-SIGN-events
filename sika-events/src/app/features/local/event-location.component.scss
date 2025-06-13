@@ -1,65 +1,59 @@
-/* =================================================================
-   ESTILOS PARA O TOGGLE SWITCH (INTERRUPTOR)
-   Estes estilos transformam uma checkbox funcional e acessível
-   em um interruptor moderno.
-================================================================= */
 
-// Container que alinha o rótulo e o interruptor.
-.form-group--toggle {
+// Importa as variáveis e estilos base do projeto
+@use '../../styles/base';
+
+// O seletor :host garante que os estilos de layout se apliquem a todo o componente
+:host {
+  display: block; // Garante que o componente ocupe espaço
+}
+
+
+.page-panel {
+  width: 100%;
+  max-width: 500px;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-tabs {
+  margin-bottom: 1.5rem;
+}
+
+// Estilos para o formulário
+.location-form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem; 
 }
 
-// O container do interruptor visual.
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 28px;
+.form-title {
+  font-family: var(--font-family-headings);
+  font-size: 1.75rem; // 28px
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-// O input real (checkbox) é escondido, mas ainda funcional.
-.toggle-switch__input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+// Garante que os campos de formulário ocupem toda a largura
+mat-form-field {
+  width: 100%;
 }
 
-// A parte visual do interruptor (o "trilho" e o círculo).
-.toggle-switch__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc; // Cor do trilho quando desligado
-  border-radius: 28px;
-  transition: .4s;
+// Container para o slide-toggle para alinhá-lo
+.toggle-group {
+  padding: 0.5rem 0;
+}
 
-  // O círculo/manipulador do interruptor
-  &::before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .4s;
+// Container para os botões de ação
+.form-actions {
+  margin-top: 1.5rem;
+
+  // O botão já é estilizado pelo `mat-raised-button`,
+  // mas garantimos que ele ocupe toda a largura.
+  button {
+    width: 100%;
+    padding: 0.75rem 0;
   }
 }
-
-// Quando o checkbox está marcado (checked), mudamos os estilos do slider.
-.toggle-switch__input:checked + .toggle-switch__slider {
-  background-color: var(--color-primary); // Usa a cor primária que definimos
-}
-
-.toggle-switch__input:checked + .toggle-switch__slider::before {
-  // Move o círculo para a direita.
-  transform: translateX(22px);
-}
-

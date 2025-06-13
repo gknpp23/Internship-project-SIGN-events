@@ -36,10 +36,10 @@ export const routes: Routes = [
   },
   {
     // Rota para a página de "Evidências" (Anexos)
-    // Assumindo que o componente principal se chama AttachmentComponent
+   
     path: 'evidencias',
     loadComponent: () =>
-      import('./features/attachment/upload-file/upload-file.component').then(
+      import('./features/evidence/upload-file/upload-file.component').then(
         (m) => m.UploadFileComponent
       ),
     title: 'Evidências',

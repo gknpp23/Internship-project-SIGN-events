@@ -1,0 +1,52 @@
+// Importa o arquivo de base para usar as variáveis de design
+@use '../../../styles/base';
+
+.file-drop-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  border: 2px dashed var(--color-border, #bbbfc1);
+  border-radius: 8px;
+  background-color: var(--color-background-panel, #ffffff);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+
+  // Feedback visual ao passar o mouse
+  &:hover {
+    border-color: var(--color-primary, #262f68);
+    background-color: rgba(38, 47, 104, 0.05);
+  }
+
+  // Estilo para quando um arquivo estiver sendo arrastado sobre a zona
+  &.is-dragging-over {
+    border-style: solid;
+    background-color: rgba(38, 47, 104, 0.1);
+  }
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  // Impede que o conteúdo interno capture o evento de clique,
+  // garantindo que o clique na label acione o input.
+  pointer-events: none;
+}
+
+// Estiliza o ícone de nuvem
+.drop-zone-icon {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: var(--color-text-light, #818181);
+}
+
+.drop-zone-text {
+  color: var(--color-text-body, #242426);
+  font-family: var(--font-family-body, sans-serif);
+  font-weight: 500;
+}

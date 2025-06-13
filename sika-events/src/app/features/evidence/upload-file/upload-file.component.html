@@ -1,0 +1,43 @@
+<!-- 
+  O container principal que atua como a zona de "arrastar e soltar".
+  O evento de clique nele irá acionar nosso input de arquivo escondido.
+-->
+<div class="file-drop-zone" (click)="fileUploadInput.click()">
+  <!-- O input funcional continua escondido. A referência #fileUploadInput permite que o container o acione. -->
+  <input
+    hidden
+    type="file"
+    #fileUploadInput
+    (change)="onFileSelected($event)"
+    multiple
+  />
+
+  <!-- Conteúdo visual da zona de upload -->
+  <div class="drop-zone-content">
+    <!-- Usamos um ícone do Material para uma melhor indicação visual. -->
+    <mat-icon class="drop-zone-icon">cloud_upload</mat-icon>
+
+    <!-- <label for="file-upload-input" class="file-drop-zone__label">
+      <app-attachment-icon class="file-drop-zone__icon"></app-attachment-icon>
+      <span class="file-drop-zone__text">Add file or drop it right here</span>
+    </label> -->
+
+    <!-- O texto instrutivo -->
+    <span class="drop-zone-text">Add files or drop them right here</span>
+
+    <!-- 
+      Um botão do tipo "stroked" (com borda) do Material que também
+      serve como um ponto de clique claro para o usuário.
+      A tag <span> dentro dele é usada para que o clique no botão
+      não propague para o container e acione a janela de arquivos duas vezes.
+    -->
+    <button
+      mat-stroked-button
+      color="primary"
+      type="button"
+      (click)="$event.stopPropagation()"
+    >
+      Browse Files
+    </button>
+  </div>
+</div>
