@@ -1,0 +1,84 @@
+<div class="event-page page-container">
+  <main class="page-content page-panel">
+    <header class="page-header">
+      <img
+        src="assets/images/kymera-logo.png"
+        alt="Logotipo da Kymera International"
+        class="logo"
+      />
+      <h1 class="company-title">KYMERA INTERNATIONAL</h1>
+    </header>
+
+    <!-- As abas de navegação do processo -->
+    <!-- <app-a-4-tabs class="page-tabs"></app-a-4-tabs> -->
+
+    <form class="event-form">
+      <h2 class="form-title">Lançamento de evento</h2>
+
+      <!-- Campo Título -->
+      <mat-form-field appearance="outline">
+        <mat-label>Título</mat-label>
+        <input matInput name="title" value="Auditoria importante" required />
+      </mat-form-field>
+
+      <!-- Campo Tipo de Evento -->
+      <mat-form-field appearance="outline">
+        <mat-label>Tipo de evento</mat-label>
+        <mat-select name="eventType" required>
+          <mat-option value="smat">SMAT</mat-option>
+          <mat-option value="auditoria">Auditoria</mat-option>
+          <mat-option value="inspecao">Inspeção</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Campo Descrição da Atividade -->
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição da atividade</mat-label>
+        <textarea
+          matInput
+          name="description"
+          placeholder="Descreva a atividade a ser realizada..."
+        ></textarea>
+      </mat-form-field>
+
+      <!-- Campo "Possui ART?" com um toggle e um campo condicional -->
+      <div class="art-section">
+        <mat-slide-toggle name="hasART" class="art-toggle">
+          Possui ART?
+        </mat-slide-toggle>
+        <!-- O campo para o número da ART só aparece se o toggle estiver ativo -->
+        <mat-form-field appearance="outline" class="art-number-field">
+          <mat-label>Número da ART</mat-label>
+          <input matInput name="artNumber" />
+        </mat-form-field>
+      </div>
+
+      <!-- Linha com campos de Responsável e Data -->
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Responsável</mat-label>
+          <input matInput name="responsible" />
+        </mat-form-field>
+
+        <!-- Campo de Data com o Datepicker do Material -->
+        <mat-form-field appearance="outline">
+          <mat-label>Data prevista</mat-label>
+          <input matInput [matDatepicker]="picker" name="dueDate" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit">
+          <span>Salvar evento</span>
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </form>
+  </main>
+</div>

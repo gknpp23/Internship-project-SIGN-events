@@ -1,0 +1,68 @@
+// Importa as variáveis e estilos base do projeto
+// @use 'app/styles/base';
+
+:host {
+  display: block;
+}
+
+// Reutiliza as classes de layout globais
+// .event-page {
+//   // .page-container
+// }
+.page-panel {
+  max-width: 600px;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-tabs {
+  margin-bottom: 1.5rem;
+}
+
+// Estilos específicos para o formulário de evento
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; // Espaçamento entre os campos
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+// Seção do "Possui ART?"
+.art-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  // .art-toggle {
+  //   // Espaçamento para o toggle
+  // }
+
+  .art-number-field {
+    flex: 1; // Faz o campo de número ocupar o espaço restante
+  }
+}
+
+// Linha com múltiplos campos
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+
+  > * {
+    flex: 1; // Faz cada campo na linha ter o mesmo tamanho
+  }
+}
+
+// Botões de ação
+.form-actions {
+  margin-top: 1.5rem;
+  button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}

@@ -45,6 +45,16 @@ export const routes: Routes = [
     title: 'Evidências',
   },
   {
+    // Rota para a página de "Evento
+   
+    path: 'evento',
+    loadComponent: () =>
+      import('./features/event/event.component').then(
+        (m) => m.EventComponent
+      ),
+    title: 'Evento',
+  },
+  {
     // Rota padrão. Se o usuário acessar a raiz do site,
     // ele será redirecionado para a página de login.
     path: '',
